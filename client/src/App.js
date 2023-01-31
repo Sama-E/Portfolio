@@ -1,8 +1,35 @@
+import { useEffect, useState } from "react";
+import useMediaQuery from "./hooks/useMediaQuery";
+
+import NavBar from "./scenes/NavBar";
 
 function App() {
+
+  // state to determine the page viewed
+  const [ selectedPage, setSelectedPage ] = useState('home');
+  const [ isTopOfPage, setIsTopOfPage ] = useState(true);
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) setIsTopOfPage(true);
+      if (window.scrollY !== 0) setIsTopOfPage(false);
+    }
+    // if window has scrolled down, enact setIsTopPage to false to change color
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="App">
-      
+    <div className="app bg-deep-blue">
+      <NavBar 
+        isTopOfPage = { isTopOfPage }
+        selectedPage = { selectedPage }
+        setSelectedPage = { setSelectedPage }
+      />
+      <div className="w-5/6 mx-auto md:h-full">
+
+      </div>
     </div>
   );
 }
