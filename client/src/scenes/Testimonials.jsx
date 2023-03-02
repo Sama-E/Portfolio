@@ -5,7 +5,7 @@ const Testimonials = () => {
     const testimonialStyles = `mx-auto relative max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48 before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2`;
     
     return (
-        <section id="testimonials" className="pt-32 pb-16">
+        <section id="testimonials" className="pt-16 pb-24">
             {/* HEADING */}
             <motion.div
                 className="md:w-1/3 text-center md:text-left"

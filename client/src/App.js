@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import { motion } from "framer-motion";
 
-import LineGradient from "./components/LineGradient";
+// import LineGradient from "./components/LineGradient";
 
 import Footer from "./scenes/Footer";
 import Contact from "./scenes/Contact";
@@ -57,7 +57,7 @@ function App() {
           <Landing setSelectedPage={ setSelectedPage } />
         </motion.div>
       </div>
-      <LineGradient />
+      {/* <LineGradient /> */}
 
       {/* MY SKILLS */}
       <div className="w-5/6 mx-auto md:h-full">
@@ -69,7 +69,7 @@ function App() {
             <MySkills />
         </motion.div>
       </div>
-      <LineGradient />
+      {/* <LineGradient /> */}
 
       {/* PROJECTS */}
       <div className="w-5/6 mx-auto">
@@ -81,7 +81,7 @@ function App() {
             <Projects />
         </motion.div>
       </div>
-      <LineGradient />
+      {/* <LineGradient /> */}
 
       {/* TESTIMONIALS */}
       <div className="w-5/6 mx-auto md:h-full">
@@ -93,7 +93,7 @@ function App() {
             <Testimonials />
         </motion.div>
       </div>
-      <LineGradient />
+      {/* <LineGradient /> */}
 
       {/* CONTACT */}
       <div className="w-5/6 mx-auto md:h-full">
